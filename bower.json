@@ -1,0 +1,19 @@
+{
+  "name": "electron-react-example",
+  "version": "0.0.1",
+  "homepage": "https://github.com/shimar/electron-react-example",
+  "authors": [
+    "shimar <shima01dev@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
