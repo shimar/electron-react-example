@@ -11,12 +11,12 @@ var $    = require('gulp-load-plugins')();
 //   .pipe(gulp.dest('renderer/views'));
 // });
 
-// gulp.task('styles', function() {
-//   return gulp.src('renderer/styles/less/main.less')
-//          .pipe($.plumber())
-//          .pipe($.less({ paths: ['.'] }))
-//          .pipe(gulp.dest('renderer/styles'));
-// });
+gulp.task('styles', function() {
+  return gulp.src('renderer/less/main.less')
+          .pipe($.plumber())
+          .pipe($.less({ paths: ['.'] }))
+          .pipe(gulp.dest('renderer/styles'));
+});
 
 gulp.task('watch', function() {
   // gulp.watch('renderer/views/**/*.jade',  ['jade']);
@@ -26,6 +26,19 @@ gulp.task('watch', function() {
 // gulp.task('run', [ 'jade', 'styles', 'watch' ], function() {
 //   return $.run('electron .').exec();
 // });
+
+gulp.task('browserify', function() {
+  return gulp.src('renderer/scripts/*.js')
+    .pipe($.browserify({
+      transform: ['reactify']
+    }))
+    .pipe($.rename('bundle.js'))
+    .pipe(gulp.dest('renderer/scripts'))
+});
+
+gulp.task('build', function() {
+
+});
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
