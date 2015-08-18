@@ -50,8 +50,8 @@ var Footer = React.createClass({
   },
 
   _onClearCompletedClick: function() {
-                            TodoActions.destroyCompleted();
-                          }
+    TodoActions.destroyCompleted();
+  }
 
 });
 

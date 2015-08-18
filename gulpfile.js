@@ -36,12 +36,12 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('renderer/scripts'))
 });
 
-gulp.task('build', function() {
-
+gulp.task('build', ['browserify', 'styles'], function() {
+  console.log('building done.');
 });
 
-gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
+gulp.task('clean', require('del').bind(null, ['.tmp', 'dist', 'renderer/scripts/bundle.js']));
 
-gulp.task('default', ['clean'], function () {
+gulp.task('default', ['clean', 'build'], function () {
   console.log('this default task.');
 });
