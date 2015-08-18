@@ -26,7 +26,7 @@ var Footer = React.createClass({
     }
 
     var itemsLeft = total - completed;
-    var itemsLeftPhrase = iitemsLeft === 1 ? ' item ' : ' items ';
+    var itemsLeftPhrase = itemsLeft === 1 ? ' item ' : ' items ';
     itemsLeftPhrase += 'left';
 
     var clearCompletedButton;
@@ -42,7 +42,7 @@ var Footer = React.createClass({
     return (
       <footer id="footer">
         <span id="todo-count">
-          <strong>{itemsLeft}</strong>{itemsLeftPfrase}
+          <strong>{itemsLeft}</strong>{itemsLeftPhrase}
         </span>
         {clearCompletedButton}
       </footer>

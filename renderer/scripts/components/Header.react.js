@@ -2,7 +2,7 @@ var React = require('react');
 var TodoActions = require('../actions/TodoActions');
 var TodoTextInput = require('./TodoTextInput.react');
 
-var Header = React.creatClass({
+var Header = React.createClass({
 
   /**
    * @return {object}

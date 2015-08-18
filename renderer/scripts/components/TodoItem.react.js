@@ -3,7 +3,7 @@ var ReactPropTypes = React.PropTypes;
 var TodoActions = require('../actions/TodoActions');
 var TodoTextInput = require('./TodoTextInput.react');
 
-var className = require('classnames');
+var classNames = require('classnames');
 
 var TodoItem = React.createClass({
 

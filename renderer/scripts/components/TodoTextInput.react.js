@@ -47,7 +47,7 @@ var TodoTextInput = React.createClass({
   },
 
   _onKeyDown: function(event) {
-    if (events.keyCode === ENTER_KEY_CODE) {
+    if (event.keyCode === ENTER_KEY_CODE) {
       this._save();
     }
   }

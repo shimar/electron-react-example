@@ -1,4 +1,4 @@
-var AppDispatcher = require('../dispacther/AppDispatcher');
+var AppDispatcher = require('../dispatcher/AppDispatcher');
 var TodoConstants = require('../constants/TodoConstants');
 
 var TodoActions = {
@@ -43,3 +43,5 @@ var TodoActions = {
   }
 
 };
+
+module.exports = TodoActions;
