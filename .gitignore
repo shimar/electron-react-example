@@ -28,3 +28,9 @@ node_modules
 
 # bower components.
 renderer/bower_components
+
+# compiled css files.
+renderer/styles/*.css
+
+# compiled js files.
+renderer/scripts/bundle.js
